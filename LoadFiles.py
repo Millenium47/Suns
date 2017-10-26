@@ -2,8 +2,7 @@ import os, random
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
-path = 'C:/Users/andrej.duben/PycharmProjects/SUNS1/notMNIST_small/'
-numberOfImagesToShow = 1;
+#path = 'C:/Users/andrej.duben/PycharmProjects/SUNS1/notMNIST_small/'
 
 #loads files from path
 def load_pictures(path,fig, i):

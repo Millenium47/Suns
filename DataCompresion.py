@@ -22,7 +22,7 @@ def letterToDataset(folderPath):
         images = os.path.join(folderPath, image)
 
         try:
-            normalizedImage = (ndimage.imread(images).astype(float) - 255.0 / 2) / 2 #vzorec z cvika
+            normalizedImage = (ndimage.imread(images).astype(float) - 255.0 / 2) / 255 #vzorec z cvika
             if normalizedImage.shape != (imageSize, imageSize):
                 raise Exception('Bad shape after normalizing, skipping')
 

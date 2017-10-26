@@ -2,6 +2,7 @@ import random, os
 from six.moves import cPickle as pickle
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import numpy as np
 
 def FinalShowTrain(pickles):
     fig = plt.figure()

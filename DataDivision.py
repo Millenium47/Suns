@@ -112,7 +112,7 @@ def toOneFile(path, divided):
                 'train_CD'      : divided[1],
                 'test_DS'       : divided[2],
                 'test_CD'       : divided[3],
-                'validatiob_DS' : divided[4],
+                'validation_DS' : divided[4],
                 'validation_CD' : divided[5],
                 }
             pickle.dump(save, f, pickle.HIGHEST_PROTOCOL)
