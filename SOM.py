@@ -11,19 +11,19 @@ def SOMAlghoritm(dataset):
     som.train_batch(dataset, 100000)
 
     print('trained')
-    fooooking = []
+    winners = []
 
     for i in range(0, len(dataset)):
         w = som.winner(dataset[i])
-        fooooking.append(w[0])
+        winners.append(w[0])
 
     numberCluster=10
 # fill clusters with data in format (i, 28*28)
     dataInClusters = [[] for j in range(0, numberCluster)]
     sum = []
     i = 0
-    for fook in fooooking:
-        dataInClusters[fook].append(dataset[i])
+    for win in winners:
+        dataInClusters[win].append(dataset[i])
         i += 1
 
     print('Sum ma pocet: '+ str(len(sum)))
@@ -54,7 +54,7 @@ def SOMAlghoritm(dataset):
 
         plt.axis('off')
         plt.imshow(dataset[index].reshape(28, 28))
-        print('Best distance for Cluster' + str(i) + ' is: ' + str(bestDistance))
+        # print('Best distance for Cluster' + str(i) + ' is: ' + str(bestDistance))
 
     for k in range(0, 10):
         plt.subplot(2, numberCluster, k + 11)
