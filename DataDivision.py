@@ -96,7 +96,7 @@ def splitToSets(datasets):
 
     print('Total number of images in final pickle file   %d' %(validation_dataset.shape[0] + testing_dataset.shape[0] + training_dataset.shape[0]))
 
-    return training_dataset, validation_coder, testing_dataset, training_coder, validation_dataset, testing_coder
+    return training_dataset, training_coder, testing_dataset, testing_coder, validation_dataset, validation_coder
 
 #input - datasets by type
 #output - final pickle file

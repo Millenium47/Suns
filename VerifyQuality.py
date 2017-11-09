@@ -11,7 +11,7 @@ def verify(datasets):
     for dataset in datasets:
         with open(dataset, 'rb') as handle:
             unpickleSet = pickle.load(handle)
-            number = random.randint(0,len(unpickleSet)/2)
+            number = random.randint(0,500)
             oneImage = unpickleSet[number,:,:]
 
 

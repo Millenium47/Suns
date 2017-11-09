@@ -1,8 +1,6 @@
-import random, os
 from six.moves import cPickle as pickle
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-import numpy as np
+
 
 def FinalShowTrain(pickles):
     fig = plt.figure()
@@ -15,9 +13,9 @@ def FinalShowTrain(pickles):
         i = 1
         j = 15
 
-        for image in datasets[0][15:18]:
+        for image in unpickled.get('train_DS')[15:18]:
             a = fig.add_subplot(1,3,i)
-            a.title.set_text(datasets[1][j])
+            a.title.set_text(unpickled.get('train_CD')[j])
             i +=1
             j +=1
 
@@ -37,9 +35,9 @@ def FinalShowTest(pickles):
         i = 1
         j = 15
 
-        for image in datasets[2][15:18]:
+        for image in unpickled.get('test_DS')[15:18]:
             a = fig.add_subplot(1,3,i)
-            a.title.set_text(datasets[3][j])
+            a.title.set_text(unpickled.get('test_CD')[j])
             i +=1
             j +=1
 
